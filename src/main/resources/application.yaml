@@ -1,0 +1,22 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: bank-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/JoelMaciel/BANK-CONFIG-SERVER-REPO
+          default-label: main
+          username: JoelMaciel
+          password: ${PASSWORD_GIT_REPO}
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: 'http://localhost:8761/eureka'
+  instance:
+    hostname: localhost
